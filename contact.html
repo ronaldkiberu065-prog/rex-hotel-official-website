@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rex Restaurant &amp; Takeaway in Mukono. Send an enquiry about meals, reservations, takeaway, delivery or catering, and find us on the map.">
+
+    <title>Contact Us | Rex Restaurant &amp; Takeaway</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header id="top" class="sticky-header">
+
+        <a href="index.html" class="logo-link">
+            <img src="images/gallery-4.jpg"
+                 alt="Rex Restaurant &amp; Takeaway"
+                 class="logo">
+        </a>
+
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="order.html">Order Now</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <section class="card">
+                <h1>Contact Rex Restaurant &amp; Takeaway</h1>
+
+                <p>
+                    Have a question, want to make a reservation or
+                    enquire about takeaway? We would love to hear
+                    from you.
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Opposite Centenary Bank, Mukono branch.
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@rexrestaurant.com">
+                        info@rexrestaurant.com
+                    </a>
+                </p>
+            </section>
+
+            <section class="card contact-form-section">
+
+                <div class="contact-form-heading">
+                    <h2>Contact Our Team</h2>
+                    <p>
+                        Have a question about our meals, takeaway, delivery,
+                        or catering services? Send us a message below.
+                        Fields marked * are required.
+                    </p>
+                </div>
+
+                <form action="#" method="post" class="professional-contact-form">
+
+                    <div class="form-group">
+                        <label for="customer-name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="customer-name"
+                            name="customer_name"
+                            placeholder="e.g. John Mukasa"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">Email Address *</label>
+                        <input
+                            type="email"
+                            id="customer-email"
+                            name="customer_email"
+                            placeholder="e.g. john@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Phone Number <span>(Optional)</span></label>
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            name="customer_phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-type">How Can We Help You? *</label>
+                        <select id="enquiry-type" name="enquiry_type" required>
+                            <option value="">Choose an enquiry type</option>
+                            <option value="menu">Menu and Prices</option>
+                            <option value="reservation">Table Reservation</option>
+                            <option value="takeaway">Takeaway Order</option>
+                            <option value="delivery">Food Delivery</option>
+                            <option value="catering">Event Catering</option>
+                            <option value="feedback">Feedback or Complaint</option>
+                            <option value="other">Other Enquiry</option>
+                        </select>
+                    </div>
+
+                    <!-- Advanced input types grouped in a fieldset with a legend -->
+                    <fieldset class="form-fieldset">
+                        <legend>Visit Details</legend>
+
+                        <div class="form-group">
+                            <label for="visit-date">Preferred Visit or Event Date <span>(Optional)</span></label>
+                            <input
+                                type="date"
+                                id="visit-date"
+                                name="visit_date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guest-count">
+                                Number of Guests:
+                                <output id="guest-output" for="guest-count">4</output>
+                            </label>
+                            <input
+                                type="range"
+                                id="guest-count"
+                                name="guest_count"
+                                min="1"
+                                max="50"
+                                value="4"
+                                oninput="document.getElementById('guest-output').textContent = this.value">
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="customer-message">Your Message *</label>
+                        <textarea
+                            id="customer-message"
+                            name="customer_message"
+                            rows="5"
+                            placeholder="Please tell us how we can assist you..."
+                            required></textarea>
+                    </div>
+
+                    <fieldset class="contact-preference">
+                        <legend>Preferred Response Method</legend>
+
+                        <label for="response-email">
+                            <input
+                                type="radio"
+                                id="response-email"
+                                name="response_method"
+                                value="Email"
+                                checked>
+                            Email
+                        </label>
+
+                        <label for="response-phone">
+                            <input
+                                type="radio"
+                                id="response-phone"
+                                name="response_method"
+                                value="Phone">
+                            Phone
+                        </label>
+                    </fieldset>
+
+                    <div class="form-group checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="newsletter"
+                            name="newsletter"
+                            value="yes">
+                        <label for="newsletter">
+                            Send me news about menu updates and special offers
+                        </label>
+                    </div>
+
+                    <div class="professional-form-buttons">
+                        <button type="submit" class="button">
+                            Send Enquiry
+                        </button>
+
+                        <button type="reset" class="button reset-button">
+                            Clear Form
+                        </button>
+                    </div>
+
+                    <p class="form-privacy-note">
+                        Please provide accurate contact details so the restaurant
+                        can respond to your enquiry.
+                    </p>
+
+                </form>
+            </section>
+
+            <div class="order-link">
+                <h3>Want to Order a Meal?</h3>
+                <p>Visit our order page to choose your meal.</p>
+                <a href="order.html" class="button">Order Now</a>
+            </div>
+
+            <section class="map-section">
+                <h2>Find Us in Mukono</h2>
+
+                <p>
+                    Use the map to search for Rex Restaurant
+                    &amp; Takeaway in Mukono, Uganda.
+                </p>
+
+                <!-- Fixed width and height, lazy loading and a meaningful title -->
+                <iframe
+                    class="map-frame"
+                    src="https://maps.google.com/maps?q=Rex%20Restaurant%20and%20Takeaway%2C%20Mukono%2C%20Uganda&amp;output=embed"
+                    title="Map showing Rex Restaurant and Takeaway in Mukono, Uganda"
+                    width="600"
+                    height="350"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Rex Restaurant &amp; Takeaway, Mukono.
+            All rights reserved.
+        </p>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+
+</body>
+</html>

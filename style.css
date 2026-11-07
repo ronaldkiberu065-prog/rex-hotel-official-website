@@ -1,0 +1,1765 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling when visitors click navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic styling for the entire webpage */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e8;
+    color: #352017;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.65;
+}
+
+/* Make images responsive and prevent unwanted overflow */
+img {
+    max-width: 100%;
+}
+
+/* Main page heading */
+h1 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    color: #482719;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+/* Section headings */
+h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    color: #713b20;
+    text-align: center;
+    margin: 30px 0 15px;
+}
+
+/* Smaller headings */
+h3 {
+    font-size: 21px;
+    color: #8b4513;
+    margin: 0 0 10px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #574438;
+    margin: 12px 0;
+}
+
+/* Prevent anchored sections from hiding behind browser overlays */
+section[id] {
+    scroll-margin-top: 15px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    text-align: center;
+    background-color: #482719;
+    color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 12px;
+}
+
+/* The main heading inside the header */
+header h1 {
+    color: #ffffff;
+    margin: 10px 0 5px;
+    font-size: 34px;
+}
+
+/* Restaurant slogan */
+header p {
+    color: #ffd09a;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-link {
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    display: inline-block;
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    background-color: #713b20;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Individual navigation links */
+nav a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    padding: 10px 14px;
+    margin: 2px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+/* Changes link appearance when the mouse hovers over it */
+nav a:hover,
+nav a:focus-visible {
+    background-color: #c68642;
+    color: #352017;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+#home.hero {
+    min-height: 450px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/restaurant.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Flexbox centers the welcome content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+/* Limits the width of the hero text */
+#home .hero-content {
+    width: 100%;
+    max-width: 800px;
+    color: #ffffff;
+}
+
+/* The hero heading uses h2 in the HTML */
+#home .hero-content h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0 0 15px;
+}
+
+/* Hero paragraph */
+#home .hero-content p {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   .hero-btn and .button share one style. Use either class
+   on any link that should look like a button.
+   ========================================================= */
+
+.hero-btn,
+.button {
+    display: inline-block;
+    background-color: #ff9800;
+    color: #352017;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Button hover and keyboard-focus effect */
+.hero-btn:hover,
+.hero-btn:focus-visible,
+.button:hover,
+.button:focus-visible {
+    background-color: #e65100;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   GENERAL CARD
+   ========================================================= */
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    border: 1px solid #dfc5ad;
+    border-radius: 10px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+/* Removes unnecessary space above the card heading */
+.card h2 {
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Card paragraph */
+.card p {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+    padding: 45px 20px;
+    background-color: #fff8f0;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* About section heading */
+.about-section h2 {
+    font-size: 32px;
+    color: #8b4513;
+    margin: 0 0 30px;
+}
+
+/* Two-column layout on larger screens */
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual About cards */
+.about-box {
+    min-width: 0;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ead8c5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    text-align: left;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* About card headings */
+.about-box h3 {
+    color: #a0522d;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+/* About card paragraphs */
+.about-box p {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Subtle lift effect when hovering over a card */
+.about-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
+
+.menu-section {
+    padding: 40px 20px;
+    background-color: #fff5e9;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Popular menu and full menu headings */
+.menu-section > h2 {
+    color: #8b4513;
+    font-size: 30px;
+    margin: 0 0 25px;
+}
+
+/* Two-column grid for menu cards */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Individual menu cards */
+.menu-card {
+    min-width: 0;
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    border-top: 4px solid #8b4513;
+    overflow: hidden;
+}
+
+/* Food photographs inside menu cards */
+.menu-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Menu card headings */
+.menu-card h3 {
+    font-size: 20px;
+    color: #8b4513;
+    margin: 5px 0 10px;
+}
+
+/* Menu card descriptions */
+.menu-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0;
+}
+
+
+/* =========================================================
+   SERVICES SECTION
+   ========================================================= */
+
+.services-section {
+    padding: 35px 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Services heading */
+.services-section > h2 {
+    font-size: 28px;
+    margin: 0 0 25px;
+}
+
+/* Service cards arranged in two columns */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Individual service card */
+.service-box {
+    min-width: 0;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Service photographs */
+.service-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Service card headings */
+.service-box h3 {
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+/* Service descriptions */
+.service-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================
+   MEDIA SECTION (VIDEO AND AUDIO)
+   ========================================================= */
+
+.media-section {
+    background-color: #fff8ed;
+    border: 2px solid #e9b66b;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Media section headings */
+.media-section h2 {
+    color: #5b321e;
+    margin-top: 0;
+}
+
+/* Media section paragraphs */
+.media-section p {
+    line-height: 1.7;
+}
+
+/* Video player */
+.media-section video {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    background-color: #402719;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+/* Audio player */
+.media-section audio {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Small explanatory note under media */
+.media-note {
+    color: #5b321e;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LAYOUT: CONTAINER, ROW AND COLUMNS
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Flexbox allows columns to sit side by side and wrap */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Each column can grow and shrink to fit the available space */
+.col {
+    flex: 1 1 250px;
+    min-width: 0;
+    padding: 20px;
+    background-color: #fff8ed;
+    border: 2px solid #e9b66b;
+    border-radius: 10px;
+}
+
+/* Column headings */
+.col h3 {
+    color: #5b321e;
+}
+
+
+/* =========================================================
+   SPECIAL OFFER SECTION
+   ========================================================= */
+
+#special-offer {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #5b321e;
+    color: #ffffff;
+    text-align: center;
+    border: 3px solid #e9b66b;
+    border-radius: 12px;
+}
+
+/* Special offer heading */
+#special-offer h2 {
+    color: #e9b66b;
+    margin-top: 0;
+}
+
+/* Special offer text */
+#special-offer p {
+    color: #ffffff;
+}
+
+/* Adds space above the special offer link */
+#special-offer .button {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   MENU PRICE TABLE
+   Tip: wrap the <table> in <div id="menu-table"> so it can
+   scroll sideways on very narrow screens.
+   ========================================================= */
+
+.menu-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+/* Table caption */
+.menu-table caption {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #4e2a14;
+    padding: 15px 10px;
+}
+
+/* Table headers and data cells */
+.menu-table th,
+.menu-table td {
+    border: 1px solid #dfc5ad;
+    padding: 12px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* Header row */
+.menu-table thead th {
+    background-color: #482719;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+/* Table body text */
+.menu-table td {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Alternating row colours improve readability */
+.menu-table tbody tr:nth-child(even) {
+    background-color: #f1dcc3;
+}
+
+.menu-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Menu category rows */
+.menu-table .category-row td {
+    background-color: #c68642;
+    color: #352017;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Highlights a row when the mouse moves over it */
+.menu-table tbody tr:hover td {
+    background-color: #ffe2bd;
+}
+
+/* Category rows keep their own colour on hover */
+.menu-table .category-row:hover td {
+    background-color: #c68642;
+}
+
+/* Wrapper that lets the table scroll horizontally on narrow screens */
+#menu-table {
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   CONTACT AND LOCATION SECTION
+   ========================================================= */
+
+.map-section {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #fff8ed;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Contact heading */
+.map-section h2 {
+    color: #5b321e;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Contact information */
+.map-section p {
+    margin: 12px 0;
+}
+
+/* Contact links */
+.map-section a {
+    color: #a34e1c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hover effect for contact links */
+.map-section a:hover {
+    text-decoration: underline;
+}
+
+/* Optional embedded map */
+.map-section iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border: 3px solid #e9b66b;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+
+/* =========================================================
+   ABOUT PAGE: HIGHLIGHT, ASIDE, INFO BOX AND FAQ
+   ========================================================= */
+
+/* Highlights the main invitation section */
+#about-highlight {
+    margin: 30px 0;
+    text-align: center;
+    background-color: #fff3e0;
+    border-left: 5px solid #8b4513;
+}
+
+/* Quick-information area */
+.about-aside {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #f8f1e7;
+    border-left: 5px solid #5b321e;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+/* Restaurant information box */
+.box-demo {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #fff3e0;
+    border: 2px solid #8b4513;
+    border-radius: 8px;
+}
+
+.box-demo h3 {
+    color: #5b321e;
+}
+
+/* Frequently asked questions panel */
+.about-faq {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff8ed;
+    border: 2px solid #e9b66b;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+/* Headings in supporting panels */
+.about-aside h2,
+.about-faq h2 {
+    color: #5b321e;
+}
+
+/* Individual FAQ items */
+.about-faq details {
+    margin: 12px 0;
+    padding: 15px;
+    background-color: #f8f1e7;
+    border: 1px solid #e9b66b;
+    border-radius: 6px;
+}
+
+/* Clickable FAQ question */
+.about-faq summary {
+    color: #8b4513;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FAQ answer spacing */
+.about-faq details p {
+    margin-bottom: 0;
+}
+
+/* Makes the About page comfortable to read on small screens */
+@media (max-width: 650px) {
+    .box-demo {
+        width: 100%;
+    }
+
+    #about-highlight .button {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #482719;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Footer paragraphs */
+footer p {
+    color: #fff5e8;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Footer headings, if present */
+footer h2 {
+    color: #ffd09a;
+    font-size: 21px;
+}
+
+/* Footer links */
+footer a {
+    color: #ffd09a;
+    text-decoration: none;
+}
+
+/* Footer link hover effect */
+footer a:hover,
+footer a:focus-visible {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   GALLERY PAGE
+   ========================================================= */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #8b4513;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Enlarge an image slightly when the mouse moves over it */
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Make gallery images fit smaller screens */
+@media (max-width: 650px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* =========================================================
+   ORDER FORM
+   ========================================================= */
+
+/* Overall page layout */
+.simple-order {
+    width: 90%;
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+/* Form heading */
+.order-intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.order-intro h2 {
+    color: #8b4513;
+}
+
+/* OUTER BOX containing the whole form */
+.order-form-box {
+    width: 100%;
+    padding: 25px;
+    margin: 0 auto;
+    border: 3px solid #8b4513;
+    border-radius: 12px;
+    background-color: #f8efe5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Smaller boxes inside the form */
+.order-card {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 22px;
+    border: 1px solid #d6b99a;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Section headings */
+.order-card h3 {
+    color: #8b4513;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Labels above text fields */
+.order-card > label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+/* Text fields, number field, dropdown and text areas */
+.order-card input[type="text"],
+.order-card input[type="tel"],
+.order-card input[type="number"],
+.order-card select,
+.order-card textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #c7a98b;
+    border-radius: 5px;
+    font: inherit;
+    background-color: #fffdf9;
+}
+
+/* Four meal options */
+.meal-options {
+    margin: 15px 0;
+}
+
+.meal-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #e0c7ad;
+    border-radius: 6px;
+    background-color: #fffaf3;
+    cursor: pointer;
+}
+
+.meal-option:hover {
+    background-color: #f5e6d3;
+}
+
+/* Pickup and delivery options.
+   ".order-card .choice-option" is more specific than ".order-card > label",
+   so these labels now display as aligned flex rows with normal weight. */
+.order-card .choice-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-weight: normal;
+}
+
+/* Small instructions */
+.order-hint {
+    color: #66584b;
+    font-size: 14px;
+}
+
+/* Buttons */
+.order-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.order-buttons button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: #8b4513;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.order-buttons button:hover {
+    background-color: #66320e;
+}
+
+.order-buttons .clear-button {
+    background-color: #777777;
+}
+
+/* Notice below the form */
+.order-notice {
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #d6b99a;
+    border-radius: 6px;
+    background-color: #f5e6d3;
+    line-height: 1.6;
+}
+
+/* Footer */
+.order-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #8b4513;
+    color: white;
+}
+
+/* Responsive layout for mobile phones */
+@media (max-width: 500px) {
+    .simple-order {
+        width: 94%;
+    }
+
+    .order-form-box {
+        padding: 12px;
+    }
+
+    .order-card {
+        padding: 14px;
+    }
+
+    .order-buttons {
+        flex-direction: column;
+    }
+
+    .order-buttons button {
+        width: 100%;
+    }
+}
+
+/* Order Now button */
+.order-link {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.order-link a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.order-link a:hover {
+    background-color: #66320e;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form-section {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fffaf3;
+    border: 1px solid #e0c7ad;
+    border-radius: 12px;
+}
+
+/* Form heading */
+.contact-form-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.contact-form-heading h2 {
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.contact-form-heading p {
+    line-height: 1.7;
+    color: #66584b;
+}
+
+/* Each form field */
+.professional-contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.professional-contact-form .form-group label {
+    font-weight: bold;
+    color: #49301f;
+}
+
+.professional-contact-form .form-group label span {
+    font-weight: normal;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Text fields and dropdown */
+.professional-contact-form input[type="text"],
+.professional-contact-form input[type="email"],
+.professional-contact-form input[type="tel"],
+.professional-contact-form select,
+.professional-contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d4b99d;
+    border-radius: 6px;
+    background-color: white;
+    font: inherit;
+}
+
+/* Text area */
+.professional-contact-form textarea {
+    resize: vertical;
+}
+
+/* Highlight the active field */
+.professional-contact-form input:focus,
+.professional-contact-form select:focus,
+.professional-contact-form textarea:focus {
+    outline: 2px solid #8b4513;
+    outline-offset: 1px;
+}
+
+/* Preferred response options */
+.contact-preference {
+    padding: 15px;
+    margin: 5px 0 22px;
+    border: 1px solid #d4b99d;
+    border-radius: 6px;
+}
+
+.contact-preference legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #49301f;
+}
+
+.contact-preference label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 20px 8px 0;
+}
+
+/* Submit and clear buttons */
+.professional-form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.professional-form-buttons button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: #8b4513;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.professional-form-buttons button:hover {
+    background-color: #66320e;
+}
+
+.professional-form-buttons .reset-button {
+    background-color: #777;
+}
+
+.professional-form-buttons .reset-button:hover {
+    background-color: #555;
+}
+
+/* Note below the form */
+.form-privacy-note {
+    margin-top: 22px;
+    font-size: 13px;
+    color: #66584b;
+    line-height: 1.6;
+}
+
+/* Mobile phone layout */
+@media (max-width: 600px) {
+    .contact-form-section {
+        padding: 18px;
+        margin: 20px auto;
+    }
+
+    .professional-form-buttons {
+        flex-direction: column;
+    }
+
+    .professional-form-buttons button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   HERO SECTION ANIMATION
+   Selectors now match the HTML: h2 for the heading and
+   .hero-btn for the button.
+   ========================================================= */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero p {
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero .hero-btn {
+    animation: fadeInUp 2s ease forwards;
+}
+
+
+/* =========================================================
+   TABLET AND SMALL-SCREEN RESPONSIVENESS
+   Adjusts layouts for screens 650px wide or smaller.
+   (Kept after the other rules so it can override them.)
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* Reduce outer page spacing */
+    body {
+        padding: 10px;
+    }
+
+    /* Smaller page heading */
+    h1 {
+        font-size: 28px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    /* Reduce the slogan size */
+    header p {
+        font-size: 15px;
+    }
+
+    /* Smaller hero content */
+    #home.hero {
+        min-height: 350px;
+        padding: 25px 15px;
+    }
+
+    #home .hero-content h2 {
+        font-size: 27px;
+    }
+
+    #home .hero-content p {
+        font-size: 16px;
+    }
+
+    /* About cards become one column */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-section h2 {
+        font-size: 27px;
+    }
+
+    /* Popular menu cards become one column */
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-card {
+        padding: 15px;
+    }
+
+    .menu-card img {
+        height: 190px;
+    }
+
+    /* Service cards become one column */
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-image {
+        height: 190px;
+    }
+
+    /* Reduce padding around media */
+    .media-section {
+        padding: 18px;
+    }
+
+    /* Allow columns to stack vertically */
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    /* Reduce table cell spacing */
+    .menu-table th,
+    .menu-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .menu-table caption {
+        font-size: 22px;
+    }
+
+    /* Adjust map height on smaller screens */
+    .map-section iframe {
+        height: 280px;
+    }
+
+    /* Smaller section headings */
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    /* Navigation links wrap to new lines if necessary */
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE SCREENS
+   Additional adjustments for screens 380px wide or smaller.
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 6px;
+    }
+
+    header {
+        padding: 18px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 8px 4px;
+    }
+
+    nav a {
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    #home.hero {
+        min-height: 300px;
+        padding: 20px 10px;
+    }
+
+    #home .hero-content h2 {
+        font-size: 23px;
+    }
+
+    .menu-section,
+    .about-section {
+        padding: 25px 12px;
+    }
+
+    .menu-card img {
+        height: 160px;
+    }
+
+    .hero-btn,
+    .button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .menu-table th,
+    .menu-table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   EXERCISE FEATURES (added after the original rules so they
+   can build on, and where needed override, the styles above)
+   ========================================================= */
+
+/* =========================================================
+   1. NAVIGATION FROM A LIST (ul > li > a, display: flex)
+   ========================================================= */
+
+nav ul {
+    list-style: none;          /* removes the bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;             /* items sit in a horizontal row */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+/* The hover colour change already exists in style.css (nav a:hover).
+   This marks the page the visitor is currently on. */
+nav a[aria-current="page"] {
+    background-color: #c68642;
+    color: #352017;
+}
+
+
+/* =========================================================
+   2. STICKY HEADER (position: sticky)
+   ========================================================= */
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;              /* keeps the header above the page content */
+    padding: 10px 15px;
+}
+
+/* Compact sizes so the sticky header does not cover the screen */
+.sticky-header h1 {
+    font-size: 26px;
+    margin: 4px 0;
+}
+
+.sticky-header p {
+    margin: 2px 0;
+    font-size: 15px;
+}
+
+.sticky-header .logo-link {
+    margin: 6px auto;
+}
+
+.sticky-header .logo {
+    width: 50px;
+}
+
+.sticky-header nav {
+    margin-top: 6px;
+    padding: 4px;
+}
+
+/* Stops anchored sections from hiding under the sticky header */
+html {
+    scroll-padding-top: 150px;
+}
+
+section[id] {
+    scroll-margin-top: 0;
+}
+
+/* Save space on phones */
+@media (max-width: 650px) {
+    .sticky-header .logo-link,
+    .sticky-header p {
+        display: none;
+    }
+
+    .sticky-header h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================================
+   3. BACK TO TOP BUTTON (position: fixed)
+   ========================================================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    padding: 12px 16px;
+    background-color: #ff9800;
+    color: #352017;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    background-color: #e65100;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   4. NOTIFICATION BADGE (position: absolute inside a
+      position: relative parent card)
+   ========================================================= */
+
+.menu-card {
+    position: relative;        /* the badge is placed relative to this card */
+}
+
+.badge {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: #c0392b;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   5. FLEXBOX ROWS: wrap, justify-content, align-items
+   ========================================================= */
+
+.row {
+    justify-content: center;   /* try: flex-start | center | space-between | space-around | space-evenly */
+    align-items: stretch;      /* try: stretch | flex-start | center | flex-end */
+}
+
+
+/* =========================================================
+   6. HOVER LIFT ON CARDS (transition + translateY)
+   ========================================================= */
+
+.col,
+.menu-card,
+.service-box {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.col:hover,
+.menu-card:hover,
+.service-box:hover,
+.col:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   7. MOBILE-FIRST BREAKPOINT (min-width: 768px)
+   Rows stack vertically by default and become a row of
+   columns on screens 768px and wider.
+   ========================================================= */
+
+.row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.col {
+    flex: none;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex: 1 1 250px;
+        width: auto;
+    }
+}
+
+
+/* =========================================================
+   8. TEXT IN COLUMNS (column-count)
+   ========================================================= */
+
+.text-columns {
+    column-count: 2;                 /* change to 3 to try three columns */
+    column-gap: 40px;
+    column-rule: 1px solid #c68642;
+}
+
+.text-columns p:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .text-columns {
+        column-count: 1;
+    }
+}
+
+
+/* =========================================================
+   9. EXTRA FORM CONTROLS (date, range, checkbox, fieldset)
+   ========================================================= */
+
+.form-fieldset {
+    padding: 15px;
+    margin: 5px 0 22px;
+    border: 1px solid #d4b99d;
+    border-radius: 6px;
+}
+
+.form-fieldset legend {
+    padding: 0 8px;
+    font-weight: bold;
+    color: #49301f;
+}
+
+.professional-contact-form input[type="date"] {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d4b99d;
+    border-radius: 6px;
+    background-color: white;
+    font: inherit;
+}
+
+.professional-contact-form input[type="range"] {
+    width: 100%;
+    accent-color: #8b4513;
+}
+
+.professional-contact-form .checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   10. RESPECT REDUCED-MOTION SETTINGS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero h2,
+    .hero p,
+    .hero .hero-btn {
+        animation: none;
+    }
+
+    .col,
+    .menu-card,
+    .service-box {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   11. MEDIA PAGE
+   (single copy; margin uses "auto" so .media-section boxes
+   stay centred on the home page as well)
+   ========================================================= */
+
+/* Welcome banner at the top of the media page */
+.media-intro {
+    text-align: center;
+    padding: 35px 20px;
+    background: #fff8ed;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.media-intro h2 {
+    color: #5b321e;
+}
+
+.media-section {
+    margin: 35px auto;
+}
+
+.media-section h2 {
+    color: #5b321e;
+    border-bottom: 2px solid #c68642;
+    padding-bottom: 10px;
+}
+
+/* Cards sit side by side and wrap on narrow screens */
+.media-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.media-card {
+    flex: 1 1 300px;
+    background: #fff8ed;
+    padding: 15px;
+    border: 1px solid #e9b66b;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-card video,
+.media-card audio {
+    width: 100%;
+}
+
+.media-card video {
+    border-radius: 8px;
+}
+
+.media-card h3 {
+    color: #5b321e;
+}
+
+.media-card p {
+    line-height: 1.6;
+}

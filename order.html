@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Place an Order | Rex Restaurant</title>
+
+    <!-- Shared stylesheet (forward slash so it also works on web hosts) and exercise additions -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header id="top" class="order-header sticky-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/gallery-4.jpg"
+                 alt="Rex Restaurant"
+                 class="logo">
+        </a>
+
+        <h1>Rex Restaurant &amp; Takeaway</h1>
+        <p>Good Food, Great Taste!</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html">Order Now</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="simple-order">
+
+        <div class="order-intro">
+            <h2>Place Your Order</h2>
+            <p>Complete the form below to order your favourite meal.</p>
+        </div>
+
+        <form class="order-form-box" action="#" method="post">
+
+            <section class="order-card">
+                <h3>1. Customer Details</h3>
+
+                <label for="customer-name">Full Name</label>
+                <input type="text" id="customer-name"
+                       name="customer_name"
+                       placeholder="Enter your full name"
+                       required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number"
+                       required>
+            </section>
+
+            <section class="order-card">
+                <h3>2. Choose Your Meal</h3>
+                <p class="order-hint">Select one meal from the options below.</p>
+
+                <div class="meal-options">
+
+                    <label class="meal-option" for="meal1">
+                        <input type="radio" id="meal1" name="meal"
+                               value="Matooke with Beef" required>
+                        <span>Matooke with Beef</span>
+                    </label>
+
+                    <label class="meal-option" for="meal2">
+                        <input type="radio" id="meal2" name="meal"
+                               value="Rice with Chicken">
+                        <span>Rice with Chicken</span>
+                    </label>
+
+                    <label class="meal-option" for="meal3">
+                        <input type="radio" id="meal3" name="meal"
+                               value="Posho with Beans">
+                        <span>Posho with Beans</span>
+                    </label>
+
+                    <label class="meal-option" for="meal4">
+                        <input type="radio" id="meal4" name="meal"
+                               value="Chips with Chicken">
+                        <span>Chips with Chicken</span>
+                    </label>
+
+                </div>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity"
+                       min="1" value="1" required>
+            </section>
+
+            <section class="order-card">
+                <h3>3. Pickup or Delivery?</h3>
+
+                <label class="choice-option" for="pickup">
+                    <input type="radio" id="pickup" name="order_method"
+                           value="Pickup" required>
+                    I will pick up my order.
+                </label>
+
+                <label class="choice-option" for="delivery">
+                    <input type="radio" id="delivery" name="order_method"
+                           value="Delivery">
+                    Please deliver my order.
+                </label>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address"
+                          rows="3"
+                          placeholder="Enter your address if delivery is needed"></textarea>
+            </section>
+
+            <!-- SECTION 4: PAYMENT -->
+            <section class="order-card">
+                <h3>4. Payment Method</h3>
+
+                <label for="payment">How would you prefer to pay?</label>
+                <select id="payment" name="payment" required>
+                    <option value="">Select a payment method</option>
+                    <option value="Cash">Cash on pickup or delivery</option>
+                    <option value="Mobile Money">Mobile Money</option>
+                    <option value="Card">Card at the restaurant</option>
+                </select>
+            </section>
+
+            <!-- SECTION 5: SPECIAL INSTRUCTIONS -->
+            <section class="order-card">
+                <h3>5. Special Instructions</h3>
+
+                <label for="instructions">Additional requests (optional)</label>
+                <textarea id="instructions" name="instructions"
+                          rows="3"
+                          placeholder="For example: no onions"></textarea>
+            </section>
+
+            <!-- FORM BUTTONS -->
+            <div class="order-buttons">
+                <button type="submit">Place Order</button>
+                <button type="reset" class="clear-button">Clear Form</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- WEBSITE FOOTER -->
+    <footer class="order-footer">
+        <p>&copy; 2026 Rex Restaurant &amp; Takeaway, Mukono.</p>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">&uarr; Top</a>
+
+</body>
+</html>
